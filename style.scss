@@ -1,0 +1,90 @@
+$VeryDarkBlue: hsl(233, 47%, 7%); /*main background*/
+$DarkDesaturatedBlue: hsl(244, 38%, 16%); /*card background*/
+$SoftViolet: hsl(277, 64%, 61%); /*accent*/
+
+$White: hsl(0, 0%, 100%); /*main heading, stats*/
+$SlightlyTransparentWhite: hsla(0, 0%, 100%, 0.75); /*main paragraph*/
+$SlightlyTransparentWhite2: hsla(0, 0%, 100%, 0.6); /*stat headings*/
+
+
+body {
+    background-color: $VeryDarkBlue;
+    min-height: 100vh;
+    padding-top: 180px;
+    font-family: 'Inter', sans-serif;
+}
+.card {
+    display: flex;
+    width: 1080px;
+    height: 446px;
+    background-color: $DarkDesaturatedBlue;
+    margin: 0px auto auto;
+    border-radius: 10px;
+    .text {
+        position: relative;
+        width: 50%;
+        div {
+            padding: 75px;
+            h1 {
+                margin: 0px;
+                color: $White;
+                font-size: 36px;
+                font-weight: 700;
+                .accent {
+                    color: $SoftViolet;
+                }
+            }
+            p {
+                padding-top: 20px;
+                color: $SlightlyTransparentWhite;
+                
+                font-size: 15px;
+            }
+            .blocks {
+                padding-top: 30px;
+                padding-left: 0px;
+                display: flex;
+                article {
+                    padding: 0 60px 0 0;
+                    
+                    h3 {
+                        color: $White;
+                        font-size: 26px;
+                        margin-bottom: 10px;
+                    }
+                    span {
+                        color: $SlightlyTransparentWhite2;
+                        font-family: 'Lexend Deca', sans-serif;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }  
+    }
+    .img {
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $SoftViolet;
+        background-image: url(images/image-header-desktop.jpg);
+        background-blend-mode:multiply;
+    }
+}
+.attribution {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width: 375px) {
+    .img {
+        background-position: top;
+    }
+}

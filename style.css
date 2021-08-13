@@ -1,0 +1,75 @@
+/*main background*/
+/*card background*/
+/*accent*/
+/*main heading, stats*/
+/*main paragraph*/
+/*stat headings*/
+body {
+  background-color: #090b1a;
+  min-height: 100vh;
+  padding-top: 180px;
+  font-family: 'Inter', sans-serif; }
+
+.card {
+  display: flex;
+  width: 1080px;
+  height: 446px;
+  background-color: #1b1938;
+  margin: 0px auto auto;
+  border-radius: 10px; }
+  .card .text {
+    position: relative;
+    width: 50%; }
+    .card .text div {
+      padding: 75px; }
+      .card .text div h1 {
+        margin: 0px;
+        color: white;
+        font-size: 36px;
+        font-weight: 700; }
+        .card .text div h1 .accent {
+          color: #aa5cdb; }
+      .card .text div p {
+        padding-top: 20px;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px; }
+      .card .text div .blocks {
+        padding-top: 30px;
+        padding-left: 0px;
+        display: flex; }
+        .card .text div .blocks article {
+          padding: 0 60px 0 0; }
+          .card .text div .blocks article h3 {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 10px; }
+          .card .text div .blocks article span {
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Lexend Deca', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px; }
+  .card .img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #aa5cdb;
+    background-image: url(images/image-header-desktop.jpg);
+    background-blend-mode: multiply; }
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+@media screen and (max-width: 375px) {
+  .img {
+    background-position: top; } }
+
+/*# sourceMappingURL=style.css.map */
