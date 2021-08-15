@@ -6,7 +6,7 @@
 /*stat headings*/
 body {
   background-color: #090b1a;
-  min-height: 100vh;
+  height: 100%;
   padding-top: 180px;
   font-family: 'Inter', sans-serif; }
 
@@ -67,9 +67,5 @@ body {
 
 .attribution a {
   color: #3e52a3; }
-
-@media screen and (max-width: 375px) {
-  .img {
-    background-position: top; } }
 
 /*# sourceMappingURL=style.css.map */

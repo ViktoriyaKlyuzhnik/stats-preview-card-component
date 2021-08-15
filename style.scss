@@ -9,7 +9,7 @@ $SlightlyTransparentWhite2: hsla(0, 0%, 100%, 0.6); /*stat headings*/
 
 body {
     background-color: $VeryDarkBlue;
-    min-height: 100vh;
+    height: 100%;
     padding-top: 180px;
     font-family: 'Inter', sans-serif;
 }
@@ -82,9 +82,4 @@ body {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
-@media screen and (max-width: 375px) {
-    .img {
-        background-position: top;
-    }
 }
