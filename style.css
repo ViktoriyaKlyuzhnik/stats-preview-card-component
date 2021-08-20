@@ -4,68 +4,182 @@
 /*main heading, stats*/
 /*main paragraph*/
 /*stat headings*/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: border-box; }
+
 body {
-  background-color: #090b1a;
-  height: 100%;
-  padding-top: 180px;
-  font-family: 'Inter', sans-serif; }
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  background-color: #090b1a; }
+
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 180px 0; }
 
 .card {
-  display: flex;
-  width: 1080px;
-  height: 446px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
   background-color: #1b1938;
-  margin: 0px auto auto;
   border-radius: 10px; }
-  .card .text {
-    position: relative;
-    width: 50%; }
-    .card .text div {
-      padding: 75px; }
-      .card .text div h1 {
-        margin: 0px;
-        color: white;
-        font-size: 36px;
-        font-weight: 700; }
-        .card .text div h1 .accent {
-          color: #aa5cdb; }
-      .card .text div p {
-        padding-top: 20px;
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 15px; }
-      .card .text div .blocks {
-        padding-top: 30px;
-        padding-left: 0px;
-        display: flex; }
-        .card .text div .blocks article {
-          padding: 0 60px 0 0; }
-          .card .text div .blocks article h3 {
-            color: white;
-            font-size: 26px;
-            margin-bottom: 10px; }
-          .card .text div .blocks article span {
-            color: rgba(255, 255, 255, 0.6);
-            font-family: 'Lexend Deca', sans-serif;
-            text-transform: uppercase;
-            font-size: 14px; }
-  .card .img {
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  .card .card__text {
+    padding: 78px 0 66px 74px; }
+    .card .card__text .card__text-title {
+      font-size: 36px;
+      font-weight: 700;
+      max-width: 378px;
+      margin: 0;
+      margin-bottom: 32px; }
+      .card .card__text .card__text-title .card__text-title-accent {
+        color: #aa5cdb; }
+    .card .card__text .card__text-text {
+      max-width: 346px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0;
+      margin-bottom: 86px; }
+    .card .card__text .card__text-desc {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 50px; }
+      .card .card__text .card__text-desc .card__text-desc-card .card__text-desc-title {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 10px; }
+      .card .card__text .card__text-desc .card__text-desc-card .card__text-desc-info {
+        font-family: 'Lexend Deca', sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6); }
+  .card .card__img {
     background-color: #aa5cdb;
     background-image: url(images/image-header-desktop.jpg);
-    background-blend-mode: multiply; }
+    background-blend-mode: multiply;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden; }
 
+@media screen and (max-width: 932px) {
+  .wrapper {
+    padding: 70px 10px 0 10px; }
+
+  .card {
+    display: grid; }
+    .card .card__text {
+      grid-column: span 2;
+      padding: 44px 10px 0 10px; }
+      .card .card__text .card__text-title {
+        padding: 0 10px;
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 34px; }
+      .card .card__text .card__text-text {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px; }
+      .card .card__text .card__text-desc {
+        align-items: center; }
+        .card .card__text .card__text-desc .card__text-desc-card {
+          grid-column: span 3;
+          margin: 0 auto;
+          margin-bottom: 34px; }
+    .card .card__img {
+      grid-column: span 2;
+      grid-row-start: -1;
+      background-color: #aa5cdb;
+      background-image: url(images/image-header-mobile.jpg);
+      background-blend-mode: multiply;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden; }
+      .card .card__img .card__img-item {
+        padding-top: 73%; } }
+/*body {
+    background-color: $VeryDarkBlue;
+    height: 100%;
+    padding-top: 180px;
+    font-family: 'Inter', sans-serif;
+}
+.card {
+    display: flex;
+    width: 1080px;
+    height: 446px;
+    background-color: $DarkDesaturatedBlue;
+    margin: 0px auto auto;
+    border-radius: 10px;
+    .text {
+        position: relative;
+        width: 50%;
+        div {
+            padding: 75px;
+            h1 {
+                margin: 0px;
+                color: $White;
+                font-size: 36px;
+                font-weight: 700;
+                .accent {
+                    color: $SoftViolet;
+                }
+            }
+            p {
+                padding-top: 20px;
+                color: $SlightlyTransparentWhite;
+                
+                font-size: 15px;
+            }
+            .blocks {
+                padding-top: 30px;
+                padding-left: 0px;
+                display: flex;
+                article {
+                    padding: 0 60px 0 0;
+                    
+                    h3 {
+                        color: $White;
+                        font-size: 26px;
+                        margin-bottom: 10px;
+                    }
+                    span {
+                        color: $SlightlyTransparentWhite2;
+                        font-family: 'Lexend Deca', sans-serif;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }  
+    }
+    .img {
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $SoftViolet;
+        background-image: url(images/image-header-desktop.jpg);
+        background-blend-mode:multiply;
+    }
+}
 .attribution {
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 11px;
-  text-align: center; }
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
-.attribution a {
-  color: #3e52a3; }
+@media screen and (max-width: 1120px) {
+    
+}*/
 
 /*# sourceMappingURL=style.css.map */
